@@ -3,9 +3,7 @@ require "open-uri"
 
 URL="http://weather.livedoor.com/forecast/webservice/json/v1?city=400010"
 
-op = JSON.pretty_generate(JSON.parse(open(URL).read))
-res = JSON.parse(op)
-
+res= JSON.parse(open(URL).read)
 
 
 for fore in res["forecasts"] do
